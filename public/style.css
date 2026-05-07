@@ -1,1 +1,26 @@
-
+:root {
+    --bg: #0b0e14;
+    --card-bg: #161b22;
+    --accent: #00f2ff;
+    --accent-secondary: #7000ff;
+    --text: #ffffff;
+}
+body {
+    margin: 0; font-family: 'Segoe UI', sans-serif;
+    background: var(--bg); color: var(--text);
+    display: flex; flex-direction: column; align-items: center; min-height: 100vh;
+}
+.navbar { width: 100%; padding: 1rem; display: flex; justify-content: space-between; background: var(--card-bg); box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+.game-container { margin-top: 2rem; text-align: center; }
+#game-board {
+    display: grid; grid-template-columns: repeat(8, 45px); grid-gap: 5px;
+    background: #21262d; padding: 10px; border-radius: 8px; border: 2px solid var(--accent);
+}
+.cell { width: 45px; height: 45px; background: rgba(255,255,255,0.05); border-radius: 4px; }
+.cell.filled { background: linear-gradient(45deg, var(--accent), var(--accent-secondary)); box-shadow: 0 0 10px var(--accent); }
+#block-container { margin-top: 20px; display: flex; justify-content: center; gap: 20px; min-height: 120px; }
+.draggable-block { cursor: grab; display: flex; flex-direction: column; }
+.block-row { display: flex; }
+.block-cell { width: 25px; height: 25px; margin: 1px; border-radius: 3px; }
+.block-cell.active { background: var(--accent); box-shadow: 0 0 5px var(--accent); }
+.btn { background: var(--accent-secondary); color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; text-decoration: none; font-weight: bold; }
