@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BlockSet | Neon Puzzle</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="navbar">
+        <h2>BLOCKSET</h2>
+        <div>
+            <% if(isAuthenticated) { %>
+                <span>Welcome, <%= user.username %></span>
+                <a href="/game" class="btn">Play</a>
+            <% } else { %>
+                <a href="/login" class="btn">Login</a>
+                <a href="/game" class="btn">Guest Play</a>
+            <% } %>
+        </div>
+    </div>
+    <div class="game-container">
+        <h1>High Speed Block Puzzle</h1>
+        <p>Clear rows and columns to score big.</p>
+        <a href="/game" class="btn" style="font-size: 1.5rem; padding: 20px 40px;">START GAME</a>
+    </div>
+</body>
+</html>
